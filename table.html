@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <style>
+
+
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 14px;
+    }
+
+    th, td {
+      border: 1px solid #333;
+      text-align: center;
+      padding: 8px;
+      word-wrap: break-word;
+    }
+
+    th {
+      background: #f2f2f2;
+    }
+
+    .blue { background-color: #b3e5f9; }
+    .pink { background-color: #f5b5f7; }
+    .orange { background-color: #fcd47e; }
+    .green { background-color: #a6f7c3; }
+    .brown { background-color: #e3b8b0; }
+
+  
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      thead tr {
+        display: none;
+      }
+      td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+      }
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+      }
+    }
+  </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col" rowspan="2">TIME <br> DAY</th>
+                <th scope="col">1</th>
+                <th scope="col">2</th>
+                <th scope="col">3</th>
+                <th scope="col">4</th>
+                <th scope="col">5</th>
+                <th scope="col">7</th>
+                <th scope="col">8</th>
+                <th scope="col">9</th>
+                <th scope="col">10</th>
+            </tr>
+            <tr>
+                <th scope="col">08:50-09:40</th>
+                <th scope="col">09:40-10:30</th>
+                <th scope="col">10:40-11:30</th>
+                <th scope="col">11:30-12:20</th>
+                <th scope="col">12:20-01:10</th>
+                <th scope="col">01:10-02:00</th>
+                <th scope="col">02:00-02:50</th>
+                <th scope="col">02:50-03:40</th>
+                <th scope="col">03:40-04:30</th>
+            </tr>
+        </thead>
+        <tbody>
+      <tr>
+        <th data-label="Day">MONDAY</th>
+        <td class="blue" colspan="1">L <br> AB-206 <br> 25VC-101-AL</td>
+        <td></td><td></td><td></td><td></td>
+        <td class="blue">L <br> AB-206 <br> 25VC-101-AL</td>
+        <td class="green" colspan="2">T <br> AB-108 <br> VACA-304 (HJ+AL)-Sec-B</td>
+        
+        <td></td>
+      </tr>
+      <tr>
+        <th data-label="Day">TUESDAY</th>
+    
+        <th class="pink" colspan="2">T <br> AB-109 <br> VACA-304 HJ+AL-Sec-C</th>
+        <td></td><td></td><td></td><td></td>
+        <td class="blue">L <br> AB-206 <br> 25VC-101-AL</td>
+        <th colspan="2">Mentor-Mentee(Final Year)</th>
+      </tr>
+      <tr>
+        <th data-label="Day">WEDNESDAY</th>
+        
+        <td class="orange" colspan="2">T <br> AB-109 <br> VACA-304 (HJ+AL)-Sec-C</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <th data-label="Day">THURSDAY</th>
+        <td class="blue">L <br> AB-206 <br> 25VC-101-AL</td>
+        <td></td>
+        <th class="pink" colspan="2">T <br> AB-108 <br> VACA-304 HJ+AL-Section-B</th>
+        <td></td><td></td><td></td>
+        <th class="brown" colspan="2">P <br> AB-206 <br> 25VC-154 AL+AP</th>
+        
+      </tr>
+      <tr>
+        <th data-label="Day">FRIDAY</th>
+        <td></td>
+        <td></td>
+        <th class="pink" colspan="2">T <br> AB-207 <br> VACA-304 HJ+AL-Sec-A</th>
+        <td></td><td></td>
+        <td class="blue">L <br> AB-206 <br> 25VC-101-AL</td>
+        
+        <td colspan="2">Mentor-Mentee (First Year)</td>
+      </tr>
+    </tbody>
+    </table>
+</body>
+</html>
+
